@@ -83,7 +83,10 @@
     sans-serif;
 }
 
-html {
+html,
+body,
+#root {
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
