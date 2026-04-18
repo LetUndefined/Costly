@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   REALCOST — DESIGN TOKENS
+   ───────────────────────────────────────── */
+
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Surface */
+  --color-bg: #f5f2eb;       /* page background */
+  --color-card: #ffffff;     /* card / panel background */
+  --color-dark: #1a1a1a;     /* dark card background */
+  --color-dark-2: #2a2a2a;   /* dark card elevated */
+  --color-border: #e8e4dc;   /* default border */
+  --color-divider: #f0ede6;  /* subtle divider line */
+
+  /* Text */
+  --color-white: #ffffff;
+  --color-text: #1a1a1a;       /* primary body text */
+  --color-muted: #999999;      /* secondary / label text */
+  --color-subtle: #cccccc;     /* placeholder / disabled */
+  --color-dark-muted: #555555; /* muted text on dark bg */
+
+  /* Brand */
+  --color-accent: #ff4d2e;
+  --color-accent-hover: #e63d1f;
+  --color-green: #16a34a;
+
+  /* Tags */
+  --color-tag-hours-bg: #fff0ee;
+  --color-tag-hours-text: #ff4d2e;
+  --color-tag-info-bg: #f5f2eb;
+  --color-tag-info-text: #999999;
+  --color-tag-money-bg: #f0fdf4;
+  --color-tag-money-text: #16a34a;
+
+  /* Font sizes */
+  --font-size-xs: 0.58rem;
+  --font-size-sm: 0.68rem;
+  --font-size-base: 0.82rem;
+  --font-size-md: 0.88rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.4rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+  --font-size-display: clamp(2rem, 12vw, 4rem);
+
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.025em;
+  --tracking-wider:    0.05em;
+  --tracking-widest:   0.1em;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+}
+
+/* ─────────────────────────────────────────
+   BASE
+   ───────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+button,
+input {
+  font-family: inherit;
+}
