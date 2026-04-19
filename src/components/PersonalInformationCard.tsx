@@ -13,7 +13,12 @@ const PersonalInformationCard = () => {
       {addedItems.length === 0 ? (
         <div className="flex flex-col items-center gap-2 py-4 text-center">
           <p className="text-muted text-sm font-bold">No items yet</p>
-          <p className="text-subtle text-xs">Add items in <NavLink to="/mylife" className="text-accent font-bold">My Life</NavLink></p>
+          <p className="text-subtle text-xs">
+            Add items in{" "}
+            <NavLink to="/mylife" className="text-accent font-bold underline">
+              My Life
+            </NavLink>
+          </p>
         </div>
       ) : (
         addedItems.map((e) => (

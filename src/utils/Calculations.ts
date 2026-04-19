@@ -13,3 +13,15 @@ export const daysToSaveCalculation = (cost: number, hourly: number) => {
 export const investYearsCalculation = (cost: number) => {
   return cost * 0.07;
 };
+
+export const savingsMonthlyAmount = (monthly: number, percentage: number) => {
+  return (monthly * percentage) / 100;
+};
+
+export const savingsHoursOfWork = (monthlyAmount: number, hourly: number) => {
+  return monthlyAmount / hourly;
+};
+
+export const savingsYearsToGoal = (goal: number, monthlyAmount: number) => {
+  return goal / monthlyAmount / 12;
+};

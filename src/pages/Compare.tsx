@@ -1,9 +1,16 @@
+import { useState } from "react";
+import GoalSetter from "../components/GoalSetter";
+import SavingSlider from "../components/SavingSlider";
+import UnderDevelopment from "../components/UnderDevelopment";
+
 const Compare = () => {
+  const [goal, setGoal] = useState<number>(0);
+
   return (
-    <div className="flex flex-col items-center justify-center h-full gap-3 text-center py-20">
-      <span className="text-4xl">🚧</span>
-      <p className="font-black text-xl text-dark">In Development</p>
-      <p className="text-muted text-sm">This feature is coming soon.</p>
+    <div className="flex flex-col gap-4 py-4">
+      <GoalSetter goal={goal} setGoal={setGoal} />
+      <SavingSlider goal={goal} />
+      <UnderDevelopment />
     </div>
   );
 };

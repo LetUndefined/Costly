@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
-import { Home, Heart, ArrowLeftRight, Clock } from "lucide-react";
+import { Home, Heart, Target, Clock } from "lucide-react";
 
 const navItems = [
   { to: "/", icon: Home, label: "Home" },
   { to: "/mylife", icon: Heart, label: "My Life" },
-  { to: "/compare", icon: ArrowLeftRight, label: "Compare" },
+  { to: "/compare", icon: Target, label: "Goal" },
   { to: "/history", icon: Clock, label: "History" },
 ];
 
