@@ -10,7 +10,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav className="w-full fixed bottom-0 bg-card border-t border-border">
+    <nav className="w-full shrink-0 bg-card border-t border-border">
       <ul className="flex justify-around h-16 items-center">
         {navItems.map(({ to, icon: Icon, label }) => (
           <li key={to}>

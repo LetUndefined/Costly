@@ -22,7 +22,7 @@ const Layout = () => {
             <User size={16} className="text-white" />
           </Link>
         </header>
-        <main className="flex-1 overflow-y-auto px-4 pb-20 min-h-0">
+        <main className="flex-1 overflow-y-auto px-4 pb-6 min-h-0">
           <RealCostProvider>
             <LifeItemProvider>
               <Outlet />
