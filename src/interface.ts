@@ -16,24 +16,16 @@ export interface RealCostContextType {
   >;
 }
 
+export type ItemUnit = "%" | "days" | "€" | "x";
+
 export interface LifeItemContextType {
-  lifeItem: {
-    name: string;
-    cost: number;
-  }[];
-  setLifeItem: React.Dispatch<
-    React.SetStateAction<
-      {
-        name: string;
-        cost: number;
-      }[]
-    >
-  >;
-  userItems: { name: string; cost: number; originalPrice: number }[];
-  setUserItems: React.Dispatch<React.SetStateAction<{ name: string; cost: number; originalPrice: number }[]>>;
+  lifeItem: { name: string; cost: number; unit: ItemUnit; icon: string }[];
+  userItems: { name: string; cost: number; originalPrice: number; unit: "x"; icon: string }[];
+  setUserItems: React.Dispatch<React.SetStateAction<{ name: string; cost: number; originalPrice: number; unit: "x"; icon: string }[]>>;
 }
 
 export interface LifeItem {
   name: string;
   cost: number;
+  icon: string;
 }

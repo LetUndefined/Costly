@@ -1,29 +1,62 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { LifeItemContext } from "./LifeItemContext";
 import { RealCostContext } from "./RealCostContext";
+import type { ItemUnit } from "../interface";
 
-export const LifeItemProvider = ({ children }: { children: React.ReactNode }) => {
+export const LifeItemProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const value = useContext(RealCostContext);
   const v = value?.value;
-  const [userItems, setUserItems] = useState<{ name: string; cost: number; originalPrice: number }[]>([]);
 
-  const [lifeItem, setLifeItem] = useState([
-    { name: "% of your month salary", cost: v?.percentage ?? 0 },
-    { name: "Days to save up", cost: v?.daysToSave ?? 0 },
-    { name: "Yearly return if invested (7%)", cost: v?.investYears ?? 0 },
-  ]);
+  const [userItems, setUserItems] = useState<
+    {
+      id?: string;
+      name: string;
+      cost: number;
+      originalPrice: number;
+      unit: "x";
+      icon: string;
+    }[]
+  >([]);
 
-  useEffect(() => {
-    setLifeItem([
-      { name: "% of your monthly salary", cost: v?.percentage ?? 0 },
-      { name: "Days to save up", cost: v?.daysToSave ?? 0 },
-      { name: "Yearly return if invested (7%)", cost: v?.investYears ?? 0 },
-      ...userItems.map((item) => ({
-        ...item,
-        cost: (v?.calculatedCost ?? 0) / item.originalPrice,
-      })),
-    ]);
-  }, [v?.percentage, v?.daysToSave, v?.investYears, v?.calculatedCost, userItems]);
+  const lifeItem: {
+    name: string;
+    cost: number;
+    unit: ItemUnit;
+    icon: string;
+  }[] = [
+    {
+      name: "% of your monthly salary",
+      cost: v?.percentage ?? 0,
+      unit: "%",
+      icon: "Heart",
+    },
+    {
+      name: "Days to save up",
+      cost: v?.daysToSave ?? 0,
+      unit: "days",
+      icon: "Zap",
+    },
+    {
+      name: "Yearly return if invested (7%)",
+      cost: v?.investYears ?? 0,
+      unit: "€",
+      icon: "Home",
+    },
+    ...userItems.map((item) => ({
+      name: item.name,
+      cost: (v?.calculatedCost ?? 0) / item.originalPrice,
+      unit: "x" as const,
+      icon: item.icon,
+    })),
+  ];
 
-  return <LifeItemContext value={{ lifeItem, setLifeItem, userItems, setUserItems }}>{children}</LifeItemContext>;
+  return (
+    <LifeItemContext value={{ lifeItem, userItems, setUserItems }}>
+      {children}
+    </LifeItemContext>
+  );
 };

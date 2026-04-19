@@ -1,7 +1,3 @@
-
-
-
-
 export const hourCalculation = (cost: number, hourly: number) => {
   return cost / hourly;
 };

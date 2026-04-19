@@ -15,18 +15,35 @@ const AddLifeItemButton = () => {
 
   const handleAdd = (item: LifeItem) => {
     const timesCanBuy = value.calculatedCost / item.cost;
-    setUserItems([...userItems, { name: item.name, cost: timesCanBuy, originalPrice: item.cost }]);
+    setUserItems([
+      ...userItems,
+      {
+        name: item.name,
+        cost: timesCanBuy,
+        originalPrice: item.cost,
+        unit: "x" as const,
+        icon: item.icon,
+      },
+    ]);
   };
 
   return (
     <>
-      <button onClick={() => setOpen(true)} className="flex items-center gap-2 border-dashed border bg-card rounded-lg p-4 w-full">
+      <button
+        onClick={() => setOpen(true)}
+        className="flex items-center gap-2 border-dashed border bg-card rounded-lg p-4 w-full"
+      >
         <div className="bg-accent rounded-full p-2">
           <Plus className="text-white" size={20} />
         </div>
         <h3 className="font-bold">Add a life item</h3>
       </button>
-      {open && <AddLifeItemModal onClose={() => setOpen(false)} onAdd={(item) => handleAdd(item)} />}
+      {open && (
+        <AddLifeItemModal
+          onClose={() => setOpen(false)}
+          onAdd={(item) => handleAdd(item)}
+        />
+      )}
     </>
   );
 };

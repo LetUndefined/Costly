@@ -7,24 +7,38 @@ import Home from "./pages/Home";
 import MyLife from "./pages/MyLife";
 import Compare from "./pages/Compare";
 import History from "./pages/History";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Layout from "./layout/Layout";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
+import { AuthProvider } from "./context/AuthProvider";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       { path: "/", element: <Home /> },
       { path: "/mylife", element: <MyLife /> },
       { path: "/compare", element: <Compare /> },
       { path: "/history", element: <History /> },
+      { path: "/profile", element: <Profile /> },
     ],
   },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
   { path: "*", element: <NotFound /> },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 );
