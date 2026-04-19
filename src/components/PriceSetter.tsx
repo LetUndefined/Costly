@@ -47,6 +47,7 @@ const PriceSetter = () => {
             onChange={handleChange}
             name="cost"
             placeholder="0"
+            value={value.cost || ""}
             className="w-full font-black text-3xl outline-none appearance-none placeholder-shown:text-subtle not-placeholder-shown:text-dark"
           />
         </div>
