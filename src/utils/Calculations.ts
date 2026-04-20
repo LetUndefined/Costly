@@ -6,7 +6,7 @@ export const percentageCalculation = (cost: number, monthly: number) => {
   return (cost / monthly) * 100;
 };
 
-export const daysToSaveCalculation = (cost: number, hourly: number) => {
+export const workingDaysToAfford = (cost: number, hourly: number) => {
   return cost / (hourly * 8);
 };
 

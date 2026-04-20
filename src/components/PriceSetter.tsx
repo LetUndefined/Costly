@@ -1,6 +1,6 @@
 import { RealCostContext } from "../context/RealCostContext";
 import { useContext } from "react";
-import { daysToSaveCalculation, hourCalculation, investYearsCalculation, percentageCalculation } from "../utils/Calculations";
+import { workingDaysToAfford, hourCalculation, investYearsCalculation, percentageCalculation } from "../utils/Calculations";
 
 const PriceSetter = () => {
   const context = useContext(RealCostContext);
@@ -16,7 +16,7 @@ const PriceSetter = () => {
     if (!value.cost || !value.hourly) return;
     const hours = hourCalculation(value.cost, value.hourly);
     const percentage = percentageCalculation(value.cost, value.monthly);
-    const daysToSave = daysToSaveCalculation(value.cost, value.hourly);
+    const daysToSave = workingDaysToAfford(value.cost, value.hourly);
     const investYears = investYearsCalculation(value.cost);
     return setValue({
       ...value,

@@ -66,7 +66,7 @@ export const LifeItemProvider = ({ children }: { children: React.ReactNode }) =>
       icon: "Heart",
     },
     {
-      name: "Days to save up",
+      name: "Working days to afford",
       cost: v?.daysToSave ?? 0,
       unit: "days",
       icon: "Zap",
