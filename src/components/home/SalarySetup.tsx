@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
 import { RealCostContext } from "../../context/RealCostContext";
 import EditValueModal from "../profile/EditValueModal";
+import HomeInfoModal from "./HomeInfoModal";
+import { Info } from "lucide-react";
 
-type Modal = "monthly" | "hourly" | null;
+type Modal = "monthly" | "hourly" | "info" | null;
 
 const SalarySetup = () => {
   const context = useContext(RealCostContext);
@@ -14,7 +16,10 @@ const SalarySetup = () => {
   return (
     <div className="border bg-dark rounded-xl flex flex-col">
       <div className="m-6 flex gap-4 flex-col">
-        <h1 className="text-sm tracking-widest uppercase font-bold text-muted/30">What does it really cost?</h1>
+        <div className="flex justify-between">
+          <h1 className="text-sm tracking-widest uppercase font-bold text-muted/30">What does it really cost?</h1>
+          <Info size={20} className="text-white" onClick={() => setModal("info")} />
+        </div>
         <p className="text-white font-extrabold text-2xl leading-none">
           See any price in <span className="text-accent italic">your real life.</span>
         </p>
@@ -38,6 +43,7 @@ const SalarySetup = () => {
 
       {modal === "monthly" && <EditValueModal label="Monthly salary" field={modal} value={value} setValue={setValue} onClose={() => setModal(null)} />}
       {modal === "hourly" && <EditValueModal label="Hourly rate" field={modal} value={value} setValue={setValue} onClose={() => setModal(null)} />}
+      {modal === "info" && <HomeInfoModal onClose={() => setModal(null)} />}
     </div>
   );
 };
