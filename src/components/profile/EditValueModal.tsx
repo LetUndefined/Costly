@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { updateProfile } from "../../hooks/supabase.api";
-import type { RealCostContextType } from "../interface";
+import type { RealCostContextType } from "../../interface";
 
 type Props = {
   label: string;

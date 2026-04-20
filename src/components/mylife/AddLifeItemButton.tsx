@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import AddLifeItemModal from "./AddLifeItemModal";
 import { LifeItemContext } from "../../context/LifeItemContext";
 import { RealCostContext } from "../../context/RealCostContext";
-import type { LifeItem } from "../interface";
+import type { LifeItem } from "../../interface";
 
 const AddLifeItemButton = () => {
   const [open, setOpen] = useState(false);
