@@ -1,7 +1,6 @@
-import PriceSetter from "../components/PriceSetter";
-import ResultsList from "../components/ResultsList";
-
-import SalarySetup from "../components/SalarySetup";
+import PriceSetter from "../components/home/PriceSetter";
+import ResultsList from "../components/home/ResultsList";
+import SalarySetup from "../components/home/SalarySetup";
 
 const Home = () => {
   return (

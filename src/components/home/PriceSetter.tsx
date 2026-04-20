@@ -1,6 +1,6 @@
-import { RealCostContext } from "../context/RealCostContext";
+import { RealCostContext } from "../../context/RealCostContext";
 import { useContext } from "react";
-import { workingDaysToAfford, hourCalculation, investYearsCalculation, percentageCalculation } from "../utils/Calculations";
+import { workingDaysToAfford, hourCalculation, investYearsCalculation, percentageCalculation } from "../../utils/Calculations";
 
 const PriceSetter = () => {
   const context = useContext(RealCostContext);

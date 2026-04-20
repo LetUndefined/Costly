@@ -5,7 +5,7 @@ import { createHashRouter as createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import MyLife from "./pages/MyLife";
-import Compare from "./pages/Compare";
+import Compare from "./pages/Goal";
 import History from "./pages/History";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -13,7 +13,7 @@ import Layout from "./layout/Layout";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./context/AuthProvider";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/shared/ProtectedRoute";
 
 const router = createBrowserRouter([
   {

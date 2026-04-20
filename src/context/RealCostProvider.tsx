@@ -3,6 +3,7 @@ import { RealCostContext } from "./RealCostContext";
 import { fetchProfile } from "../hooks/supabase.api";
 
 export const RealCostProvider = ({ children }: { children: React.ReactNode }) => {
+  const [loading, setLoading] = useState(true);
   const [value, setValue] = useState({
     monthly: 0,
     hourly: 0,
@@ -18,8 +19,9 @@ export const RealCostProvider = ({ children }: { children: React.ReactNode }) =>
   useEffect(() => {
     fetchProfile().then((data) => {
       if (data) setValue((prev) => ({ ...prev, monthly: data.monthly, hourly: data.hourly }));
+      setLoading(false);
     });
   }, []);
 
-  return <RealCostContext value={{ value, setValue }}>{children}</RealCostContext>;
+  return <RealCostContext value={{ value, setValue, loading }}>{children}</RealCostContext>;
 };

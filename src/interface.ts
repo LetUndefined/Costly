@@ -1,6 +1,7 @@
 export interface RealCostContextType {
   value: { monthly: number; hourly: number; cost: number; calculatedCost: number; totalHours: number; percentage: number; netflix: number; daysToSave: number; investYears: number };
 
+  loading: boolean;
   setValue: React.Dispatch<
     React.SetStateAction<{
       monthly: number;

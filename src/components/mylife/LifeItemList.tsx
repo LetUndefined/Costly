@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { LifeItemContext } from "../context/LifeItemContext";
-import { ICON_MAP } from "../utils/icons";
+import { LifeItemContext } from "../../context/LifeItemContext";
+import { ICON_MAP } from "../../utils/icons";
 import { Trash2 } from "lucide-react";
-import { deleteLifeItem } from "../hooks/supabase.api";
+import { deleteLifeItem } from "../../hooks/supabase.api";
 
 type Props = {
   edit: boolean;

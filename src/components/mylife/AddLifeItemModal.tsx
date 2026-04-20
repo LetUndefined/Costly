@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { useState } from "react";
-import { ICON_MAP, ICON_KEYS } from "../utils/icons";
+import { ICON_MAP, ICON_KEYS } from "../../utils/icons";
 
 type Props = {
   onClose: () => void;

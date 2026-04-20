@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { RealCostContext } from "../context/RealCostContext";
+import { RealCostContext } from "../../context/RealCostContext";
 import TotalHours from "./TotalHours";
-import DefaultInformationCard from "./DefaultInformationCard";
-import PersonalInformationCard from "./PersonalInformationCard";
+import DefaultInformationCard from "../profile/DefaultInformationCard";
+import PersonalInformationCard from "../profile/PersonalInformationCard";
 
 const ResultsList = () => {
   const context = useContext(RealCostContext);

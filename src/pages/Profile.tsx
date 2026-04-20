@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { User, LogOut, ChevronRight } from "lucide-react";
 import { AuthContext } from "../context/AuthContext";
-import EditValueModal from "../components/EditValueModal";
+import EditValueModal from "../components/profile/EditValueModal";
 import { fetchProfile } from "../hooks/supabase.api";
 import { RealCostContext } from "../context/RealCostContext";
 

@@ -25,3 +25,7 @@ export const savingsHoursOfWork = (monthlyAmount: number, hourly: number) => {
 export const savingsYearsToGoal = (goal: number, monthlyAmount: number) => {
   return goal / monthlyAmount / 12;
 };
+
+export const paycheckToGoal = (goal: number, monthly: number) => {
+  return monthly / goal
+}

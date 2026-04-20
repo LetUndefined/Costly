@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { RealCostContext } from "../context/RealCostContext";
+import { RealCostContext } from "../../context/RealCostContext";
 
 type Props = { goal: number; setGoal: (goal: number) => void };
 

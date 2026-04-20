@@ -1,7 +1,7 @@
 import { useState } from "react";
-import AddLifeItemButton from "../components/AddLifeItemButton";
-import LifeItemList from "../components/LifeItemList";
-import MyLifeHeader from "../components/MyLifeHeader";
+import AddLifeItemButton from "../components/mylife/AddLifeItemButton";
+import LifeItemList from "../components/mylife/LifeItemList";
+import MyLifeHeader from "../components/mylife/MyLifeHeader";
 
 const MyLife = () => {
   const [edit, setEdit] = useState(false);

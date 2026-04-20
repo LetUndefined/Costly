@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LifeItemContext } from "../context/LifeItemContext";
+import { LifeItemContext } from "../../context/LifeItemContext";
 import { NavLink } from "react-router";
 
 const PersonalInformationCard = () => {
@@ -24,7 +24,7 @@ const PersonalInformationCard = () => {
         addedItems.map((e) => (
           <div className="flex flex-col border border-border rounded-lg items-center justify-center px-4 bg-bg aspect-square min-w-[6rem] max-w-[6rem] " key={e.name}>
             <span className="font-bold text-md truncate w-full text-center capitalize ">{e.name.toLowerCase()}</span>
-            <span className="font-black text-3xl text-accent">{e.cost.toFixed(0)}x</span>
+            <span className="font-black text-2xl text-accent">{e.cost.toFixed(0)}x</span>
           </div>
         ))
       )}

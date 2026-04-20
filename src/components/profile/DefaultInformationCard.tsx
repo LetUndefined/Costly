@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LifeItemContext } from "../context/LifeItemContext";
+import { LifeItemContext } from "../../context/LifeItemContext";
 
 const DefaultInformationCard = () => {
   const context = useContext(LifeItemContext);

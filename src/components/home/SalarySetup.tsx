@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { RealCostContext } from "../context/RealCostContext";
-import EditValueModal from "./EditValueModal";
+import { RealCostContext } from "../../context/RealCostContext";
+import EditValueModal from "../profile/EditValueModal";
 
 type Modal = "monthly" | "hourly" | null;
 

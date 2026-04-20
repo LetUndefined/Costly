@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { RealCostContext } from "../context/RealCostContext";
-import { savingsMonthlyAmount, savingsHoursOfWork, savingsYearsToGoal } from "../utils/Calculations";
+import { RealCostContext } from "../../context/RealCostContext";
+import { savingsMonthlyAmount, savingsHoursOfWork, savingsYearsToGoal } from "../../utils/Calculations";
 
 type Props = { goal: number };
 
@@ -27,7 +27,7 @@ const SavingSlider = ({ goal }: Props) => {
         <span className="text-xs font-bold text-subtle">50%</span>
       </div>
       <div className="flex justify-between items-center pt-1 border-t border-border">
-        <span className="text-xs text-muted">
+        <span className="text-xs font-semibold text-muted">
           €{monthly.toFixed(0)}/mo · {hours.toFixed(0)} hrs of work
         </span>
         <span className="text-sm font-black text-dark">{years.toFixed(1)} yrs</span>

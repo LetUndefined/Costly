@@ -1,8 +1,8 @@
 import { Plus } from "lucide-react";
 import { useContext, useState } from "react";
 import AddLifeItemModal from "./AddLifeItemModal";
-import { LifeItemContext } from "../context/LifeItemContext";
-import { RealCostContext } from "../context/RealCostContext";
+import { LifeItemContext } from "../../context/LifeItemContext";
+import { RealCostContext } from "../../context/RealCostContext";
 import type { LifeItem } from "../interface";
 
 const AddLifeItemButton = () => {

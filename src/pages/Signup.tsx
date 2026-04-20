@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import AuthInput from "../components/AuthInput";
+import AuthInput from "../components/ui/AuthInput";
 import { AuthContext } from "../context/AuthContext";
 
 const Signup = () => {
