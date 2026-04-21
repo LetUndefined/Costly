@@ -9,30 +9,30 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 
   /* Surface */
-  --color-bg: #f5f2eb;       /* page background */
-  --color-card: #ffffff;     /* card / panel background */
-  --color-dark: #1a1a1a;     /* dark card background */
-  --color-dark-2: #2a2a2a;   /* dark card elevated */
-  --color-border: #e8e4dc;   /* default border */
-  --color-divider: #f0ede6;  /* subtle divider line */
+  --color-bg: #D4DEEE;       /* page background */
+  --color-card: #EEF3FB;     /* card / panel background */
+  --color-dark: #1E3A5F;     /* dark card background */
+  --color-dark-2: #264d7a;   /* dark card elevated */
+  --color-border: #cdd8ea;   /* default border */
+  --color-divider: #d8e3f0;  /* subtle divider line */
 
   /* Text */
   --color-white: #ffffff;
   --color-text: #1a1a1a;       /* primary body text */
-  --color-muted: #999999;      /* secondary / label text */
-  --color-subtle: #cccccc;     /* placeholder / disabled */
-  --color-dark-muted: #555555; /* muted text on dark bg */
+  --color-muted: #94a3b8;      /* secondary / label text */
+  --color-subtle: #cbd5e1;     /* placeholder / disabled */
+  --color-dark-muted: #93b8d8; /* muted text on dark bg */
 
   /* Brand */
-  --color-accent: #ff4d2e;
-  --color-accent-hover: #e63d1f;
+  --color-accent: #FF8A65;
+  --color-accent-hover: #f4723e;
   --color-green: #16a34a;
 
   /* Tags */
-  --color-tag-hours-bg: #fff0ee;
-  --color-tag-hours-text: #ff4d2e;
-  --color-tag-info-bg: #f5f2eb;
-  --color-tag-info-text: #999999;
+  --color-tag-hours-bg: #fff3ef;
+  --color-tag-hours-text: #FF8A65;
+  --color-tag-info-bg: #F8FAFC;
+  --color-tag-info-text: #94a3b8;
   --color-tag-money-bg: #f0fdf4;
   --color-tag-money-text: #16a34a;
 
