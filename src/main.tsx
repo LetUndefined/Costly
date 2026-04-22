@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./context/AuthProvider";
 import ProtectedRoute from "./components/shared/ProtectedRoute";
+import Investing from "./pages/Investing";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/mylife", element: <MyLife /> },
       { path: "/compare", element: <Compare /> },
-      { path: "/history", element: <History /> },
+      { path: "/invest", element: <Investing /> },
       { path: "/profile", element: <Profile /> },
     ],
   },
